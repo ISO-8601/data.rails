@@ -13,7 +13,7 @@ Gem by Tim Dysinger.
 Install the AwsSdbProxy plugin from Rubyforge[http://www.rubyforge.org] as
 usual:
 
- script/plugin install http://rug-b.rubyforge.org/svn/aws_sdb_proxy
+ script/plugin install git://github.com/ISO-8601/aws_sdb_proxy.git
 
 == Setup and Usage
 
@@ -21,8 +21,8 @@ usual:
    config file (optionally configure server ports and a salt used to hash
    primary keys from the record content).
    
-2. Check your available SimpleDB domains with <tt>rake aws_sdb:list_domains</tt> and
-   create a new one with <tt>rake aws_sdb:create_domain DOMAIN=my_new_domain</tt>
+2. Check your available SimpleDB domains with <pre>rake aws_sdb:list_domains</pre> and
+   create a new one with <pre>rake aws_sdb:create_domain DOMAIN=my_new_domain</pre>
    if necessary.
    
 3. Start the AwsSdbProxy server with <tt>rake aws_sdb:start_proxy_in_foreground</tt>.
@@ -64,9 +64,9 @@ pre-defined schema. Every record can potentially have different attributes.
 SimpleDB also has no data types associated with it's attributes, all data will
 be stored as strings.
 
-AwsSdbProxy adds a special <tt>_resource</tt> attribute to distinguish diffent models
+AwsSdbProxy adds a special <pre>_resource</pre> attribute to distinguish diffent models
 within the same SimpleDB domain and also adds and handles the usual
-<tt>created_at</tt> and <tt>updated_at</tt> attributes. Record ids are generated using
+<pre>created_at</pre> and <pre>updated_at</pre> attributes. Record ids are generated using
 a SHA512 hash function to make key collisions extremely unlikely.
 
 Copyright (c) 2008 mailto:martin.rehfeld@glnetworks.de, released under the MIT license
