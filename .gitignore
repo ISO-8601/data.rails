@@ -16,4 +16,4 @@ vendor/gems/bcrypt-ruby-2.0.5/*/*.o
 vendor/gems/bcrypt-ruby-2.0.5/*/*.so
 vendor/gems/*/.specification
 vendor/gems/bcrypt-ruby-2.0.5/ext/Makefile 
-
+config/aws_sdb_proxy.yml
