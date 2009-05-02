@@ -10,8 +10,7 @@ Gem by Tim Dysinger.
 
 == Installation
 
-Install the AwsSdbProxy plugin from Rubyforge[http://www.rubyforge.org] as
-usual:
+Install the AwsSdbProxy plugin as usual:
 
  script/plugin install git://github.com/ISO-8601/aws_sdb_proxy.git
 
@@ -25,9 +24,9 @@ usual:
    create a new one with <pre>rake aws_sdb:create_domain DOMAIN=my_new_domain</pre>
    if necessary.
    
-3. Start the AwsSdbProxy server with <tt>rake aws_sdb:start_proxy_in_foreground</tt>.
+3. Start the AwsSdbProxy server with <pre>rake aws_sdb:start_proxy_in_foreground</pre>.
    (Once things are configured correctly you can also use
-   <tt>rake aws_sdb:start_proxy</tt> to start the server as a background daemon.)
+   <pre>rake aws_sdb:start_proxy</pre> to start the server as a background daemon.)
 
 4. Connect any ActiveResource model to your SimpleDB domain, e.g.
 
